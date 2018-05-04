@@ -1,0 +1,50 @@
+@page-padding: 1rem;
+
+.site-header {
+    background-color: black;
+    color: white;
+    padding: @page-padding;
+    font-size: 2rem;
+
+    a {
+        color: white;
+    }
+}
+
+.site-body {
+    padding: @page-padding;
+}
+
+.game-platform {
+    padding-left: 0.5rem;
+    
+    &:after { content: " \00b7"; }
+    
+    &:last-child:after {
+            content: "";
+    }
+
+    &:first-child {
+        padding-left: 0;
+    }
+}
+
+@input-color-base: lighten(black, 70%);
+@input-color-focus: blue;
+@input-color-hover: black;
+
+.form-control {
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 2px 0 0 @input-color-base;
+    height: auto;
+    
+    &:focus {
+        box-shadow: 0 2px 0 0 @input-color-focus;
+    }
+
+    &:hover {
+        box-shadow: 0 2px 0 0 @input-color-hover;
+    }
+}
+
